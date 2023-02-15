@@ -1,8 +1,15 @@
 package ru.job4j.producer;
 
+/**
+ * Реализация класса Producer - добавляет в очередь элемент.
+ *
+ * @author Igor Gatman
+ * @version 1.1
+ * @since 15.02.2023
+ */
 public class Producer implements Runnable {
     private final SimpleBlockingQueue<Integer> simpleBlockingQueue;
-    private int value;
+    private final int value;
 
     public Producer(SimpleBlockingQueue<Integer> simpleBlockingQueue, int value) {
         this.simpleBlockingQueue = simpleBlockingQueue;
